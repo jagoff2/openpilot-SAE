@@ -1,0 +1,7 @@
+onnx
+numpy
+scikit-learn
+matplotlib
+zstandard
+tqdm
+pycapnp
