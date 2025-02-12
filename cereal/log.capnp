@@ -1,4 +1,4 @@
-using Cxx = import "G:\SAE\cereal\c++.capnp";
+using Cxx = import "./include/c++.capnp";
 $Cxx.namespace("cereal");
 
 using Car = import "car.capnp";

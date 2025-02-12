@@ -18,17 +18,19 @@ from sklearn.decomposition import SparsePCA
 import matplotlib.pyplot as plt
 import pickle
 import os
+import capnp
+#import pycapnp
 
 # Import LogReader and related classes from FrogPilot's logreader module
 # Ensure that the 'cereal' package is correctly structured and 'log' module is available
 from cereal import LogMessage  # Updated import based on the new package structure
-from openpilot.tools.lib.logreader import LogReader, Route, ReadMode
+from lib import LogReader, Route, ReadMode
 
 # Constants
 DRIVING_MODEL_PATH = "models/supercombo.onnx"  # Local path to the ONNX driving model
 SPARSE_COMPONENTS = 50  # Number of sparse components for the autoencoder
 SPARSE_ALPHA = 1.0      # Sparsity controlling parameter
-ROUTE_ID = "a2a0ccea32023010|2023-07-27--13-01-19"  # Example route ID; replace with actual route ID
+ROUTE_ID = "0000002a--f81af81530--181"  # Example route ID; replace with actual route ID
 
 def load_onnx_model(model_path: str) -> onnx.ModelProto:
     """
