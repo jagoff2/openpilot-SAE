@@ -14,6 +14,7 @@ import numpy as np
 from onnx import numpy_helper
 from sklearn.decomposition import SparsePCA
 import matplotlib.pyplot as plt
+import pickle
 
 # Constants
 DRIVING_MODEL_PATH = "G:/sae/supercombo.onnx"
